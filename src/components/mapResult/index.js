@@ -19,7 +19,7 @@ class MapResult extends Component {
                     </Box>
                 </div>
                 <div className="data-information-item">
-                    <p className="title-data-information deadths-color">Deadths</p>
+                    <p className="title-data-information deadths-color">Deaths</p>
                     <Box display="flex" alignItems="center" justifyContent="center" className="data-deaths">
                         <SentimentVeryDissatisfiedIcon className="icon" />
                         <p className="value">{this.props.information.deadths}</p>

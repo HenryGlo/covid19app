@@ -17,6 +17,7 @@
     "react-scripts": "3.4.3",
     "react-simple-maps": "^2.1.2",
     "react-tooltip": "^4.2.10",
+    "react-zoom-pan-pinch": "^1.6.1",
     "world-map-country-shapes": "^1.0.0"
   },
   "scripts": {
