@@ -12,25 +12,37 @@ class MapResult extends Component {
             <Box display="flex" flexDirection="column" alignItems="center" justifyContent="flex-start">
                 <CountryFlag country={this.props.country} className="country-flag"/>
                 <div className="data-information-item">
-                    <p className="title-data-information confirmed-color">Confirmed Cases</p>
-                    <Box display="flex" alignItems="center" justifyContent="center" className="data-confirmed">
-                        <HotelIcon className="icon" />
-                        <p className="value">{this.props.information.confirmed}</p>
-                    </Box>
+                    <p className="title-data-information confirmed-color">Casos confirmados</p>
+                    <Grid className="data-confirmed" container direction="row" alignItems="center" justify="center" spacing={3}>
+                        <Grid item lg={6}>
+                            <HotelIcon className="icon" />
+                        </Grid>
+                        <Grid item lg={6}>
+                            <p className="value">{this.props.information.confirmed.toLocaleString()}</p>
+                        </Grid>
+                    </Grid>    
                 </div>
                 <div className="data-information-item">
-                    <p className="title-data-information deadths-color">Deaths</p>
-                    <Box display="flex" alignItems="center" justifyContent="center" className="data-deaths">
-                        <SentimentVeryDissatisfiedIcon className="icon" />
-                        <p className="value">{this.props.information.deadths}</p>
-                    </Box>
+                    <p className="title-data-information deadths-color">Muertes</p>
+                    <Grid className="data-deaths" container direction="row" alignItems="center" justify="center" spacing={3}>
+                        <Grid item lg={6}>
+                            <SentimentVeryDissatisfiedIcon className="icon" />
+                        </Grid>
+                        <Grid item lg={6}>
+                            <p className="value">{this.props.information.deadths.toLocaleString()}</p>
+                        </Grid>
+                    </Grid>   
                 </div>
                 <div className="data-information-item">
-                    <p className="title-data-information recovery-color">Recovery</p>
-                    <Box display="flex" alignItems="center" justifyContent="center" className="data-recovery">
-                        <InsertEmoticonIcon className="icon" />
-                        <p className="value">{this.props.information.recovered}</p>
-                    </Box>
+                    <p className="title-data-information recovery-color">Recuperados</p>
+                    <Grid className="data-recovery" container direction="row" alignItems="center" justify="center" spacing={3}>
+                        <Grid item lg={6}>
+                            <InsertEmoticonIcon className="icon" />
+                        </Grid>
+                        <Grid item lg={6}>
+                            <p className="value">{this.props.information.recovered.toLocaleString()}</p>
+                        </Grid>
+                    </Grid>  
                 </div>
             </Box>
         );

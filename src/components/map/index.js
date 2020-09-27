@@ -22,13 +22,14 @@ class Map extends Component {
             actualCountry: "",
             covidInformation: {},
             requestOn: true,
-            positionMap: {}
+            positionMap: {},
+            countryInfo: {}
             
         };
     }
     zoomMap = position =>{
         this.setState({
-            positionMap:{scale:1,x: position[0], y: position[1]}
+            positionMap:{scale:position[0],x: position[1], y: position[2]}
         })
         console.log("work")
     }
@@ -57,7 +58,7 @@ class Map extends Component {
         })
         this.apiRequest("VE")
     }
-    toggleCountry = country => {
+    toggleCountry = (country) => {
         const { selectedCountries } = this.state;
         this.setState({
             selectedCountries: {
@@ -66,16 +67,19 @@ class Map extends Component {
             actualCountry: country.id,
             requestOn: true
         });
+        console.log(this)
         this.apiRequest(country.id)
     };
 
    
   render() {
     const { selectedCountries } = this.state;
+    
     let actualCountry = this.state.actualCountry
     let dataInformation = this.state.covidInformation
     let pendingRequest = this.state.requestOn
     let mapZoom = this.state.positionMap
+    let countryIn = this.state.countryInfo
     console.log(mapZoom)
     const mapCountries = country.map(country => (
     
@@ -85,8 +89,9 @@ class Map extends Component {
         style={{
           fill: this.state.selectedCountries[country.id] ? "tomato" : "#eee",
           cursor: "pointer",
-          stroke: "#000"
+          stroke: "#000",
         }}
+        className="country-svg"
         onClick={() => this.toggleCountry(country)}
       />
     ));
@@ -101,8 +106,8 @@ class Map extends Component {
                     </div>
                     <Grid container direction="row" justify="center" spacing={3}>
                         <Grid item lg={8} className="map-container">
-                        <TransformWrapper defaultScale={2} defaultPositionX={0} defaultPositionY={0}>
-                            {({ zoomIn, zoomOut, resetTransform, positionX, positionY, ...rest }) => (
+                        <TransformWrapper>
+                            {({ zoomIn, zoomOut, resetTransform, positionX, positionY,scale, ...rest }) => (
                             <React.Fragment>
                                 <div className="tools">
                                     <Grid container direction="row" justify="flex-start" spacing={1}>
@@ -124,7 +129,8 @@ class Map extends Component {
                                         height="600px"
                                         width="100%"
                                         viewBox="0 0 2000 1001"
-                                        onClick={() => this.zoomMap([positionX, positionY])}
+                                        onClick={() => this.zoomMap([scale,positionX, positionY])}
+                                        className="svg-bakground-map"
                                     >   
                                         {mapCountries}
                                     </svg>
@@ -134,7 +140,7 @@ class Map extends Component {
                         </TransformWrapper>
                         </Grid>
                         <Grid item lg={4} className="data-information">
-                            {pendingRequest ? <Box display="flex" flexDirection="row" alignItems="center" justifyContent="center" className="preloader-cont"><CircularProgress /></Box> : <MapResult country={actualCountry} information={dataInformation}/>}
+                            {pendingRequest ? <Box display="flex" flexDirection="row" alignItems="center" justifyContent="center" className="preloader-cont"><CircularProgress /></Box> : <MapResult country={actualCountry} information={dataInformation} countryInfo={countryIn}/>}
                         </Grid>
                     </Grid>
                 </Grid>
