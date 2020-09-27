@@ -123,6 +123,12 @@ body {
     .map-container svg {
         height: 300px !important;
     }
+    .tools svg {
+        height: 100% !important;
+    }
+    .button-map  {
+        padding: 10px 2%;
+    }
 }
 
 .react-transform-component  {

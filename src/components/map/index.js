@@ -97,7 +97,7 @@ class Map extends Component {
     ));
     return (
         <React.Fragment>
-            <Grid container direction="row" justify="center" spacing={3}>
+            <Grid container direction="row" justify="center">
                 <Grid item lg={10}>
                     <div className="title-container">
                         <LocalHospitalIcon className="icon" />
@@ -111,12 +111,12 @@ class Map extends Component {
                             <React.Fragment>
                                 <div className="tools">
                                     <Grid container direction="row" justify="flex-start" spacing={1}>
-                                        <Grid item lg={2}>
+                                        <Grid item lg={2} xs={12}>
                                             <Button variant="contained" className="button-map" onClick={zoomIn} color="primary" endIcon={<ZoomInIcon>Acercar</ZoomInIcon>}>
                                                 Acercar
                                             </Button>
                                         </Grid>
-                                        <Grid item lg={2}>
+                                        <Grid item lg={2} xs={12}>
                                             <Button variant="contained" className="button-map" onClick={zoomOut} color="secondary" endIcon={<ZoomOutIcon>Alejar</ZoomOutIcon>}>
                                                 Alejar
                                             </Button>
@@ -139,7 +139,7 @@ class Map extends Component {
                             )}
                         </TransformWrapper>
                         </Grid>
-                        <Grid item lg={4} className="data-information">
+                        <Grid item lg={4} xs={10} className="data-information">
                             {pendingRequest ? <Box display="flex" flexDirection="row" alignItems="center" justifyContent="center" className="preloader-cont"><CircularProgress /></Box> : <MapResult country={actualCountry} information={dataInformation} countryInfo={countryIn}/>}
                         </Grid>
                     </Grid>
