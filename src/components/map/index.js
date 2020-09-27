@@ -32,6 +32,9 @@ class Map extends Component {
                 },
                 requestOn: false,
             });
+        }).catch(err => {
+            // what now?
+            console.log(err);
         })
         
     }

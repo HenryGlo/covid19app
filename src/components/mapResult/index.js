@@ -29,7 +29,7 @@ class MapResult extends Component {
                     <p className="title-data-information recovery-color">Recovery</p>
                     <Box display="flex" alignItems="center" justifyContent="center" className="data-recovery">
                         <InsertEmoticonIcon className="icon" />
-                        <p className="value">{this.props.information.deadths}</p>
+                        <p className="value">{this.props.information.recovered}</p>
                     </Box>
                 </div>
             </Box>
