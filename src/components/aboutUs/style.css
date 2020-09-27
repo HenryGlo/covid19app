@@ -1,0 +1,38 @@
+.about-us-title {
+    text-align: center;
+}
+.about-us-title .title {
+    font-size: 4rem;
+    font-weight: 300;
+    color: #000000c5;
+    margin: 0 !important;
+}
+.about-us-title .subtitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #00000083;
+}
+
+.about-us-section {
+    padding: 180px 5%;
+}
+.information-items-container {
+    text-align: center;
+    margin-top: 50px;
+}
+.information-items-container .icon {
+    font-size: 8rem !important;
+    color: rgb(0, 0, 155);
+}
+
+.information-items-container .title {
+    font-weight: 200;
+    font-size: 2.4rem;
+    color: #000000da;
+}
+
+.information-items-container .subtitle {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #00000069;
+}

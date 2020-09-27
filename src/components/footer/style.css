@@ -1,0 +1,17 @@
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}   
+
+footer a {
+    text-decoration: underline;
+    color: white !important;
+}
+
+footer .title {
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 200;
+}

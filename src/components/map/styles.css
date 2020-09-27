@@ -1,0 +1,128 @@
+body {
+    padding: 50px 0 0 0;
+    background: rgba(148, 148, 148, 0.096);
+    overflow-x: hidden;
+}
+.preloader-cont {
+    height: 100%;
+}
+.preloader-cont svg {
+    font-size: 5rem !important;
+}
+.title {
+    font-size: 4rem;
+    font-weight: 300;
+    color: #000000c5;
+    margin: 0 !important;
+}
+.title-container {
+    text-align: center;
+}
+.title-container .icon {
+    font-size: 4rem;
+    margin: 0;
+    color: rgba(156, 2, 2, 0.89);
+    margin-bottom: 30px;
+}
+
+.title-container .subtitle {
+    font-weight: 400;
+    font-size: 2rem;
+    color: #00000086;
+    margin-bottom: 50px !important;
+}
+
+.country-flag {
+    width: 80% !important;
+    height: 10% !important;
+    border-radius: 5px;
+    padding: 10px 5%;
+    margin-bottom: 50px;
+}
+.data-information {
+    border: 2px solid rgba(0, 0, 0, 0.342);
+}
+.data-information-item {
+    margin: 10px 0;
+    width: 80%;
+    text-align: center;
+}
+.confirmed-color {
+    color: blue;
+}
+.deadths-color {
+    color: red;
+}
+.recovery-color {
+    color: rgb(2, 204, 2);
+}
+.title-data-information {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin: 0 !important;
+}
+.data-deaths {
+    border: 1px solid red;
+    border-radius: 5px;
+    padding: 10px 5%;
+}
+
+.data-deaths .value {
+    font-weight: 800;
+    color: red;
+    font-size: 1.5rem;
+    margin: 0 !important;
+}
+
+.data-deaths .icon {
+    color: red;
+    font-size: 3rem;
+    margin-right: 10%;
+}
+
+.data-confirmed {
+    border: 1px solid blue;
+    border-radius: 5px;
+    padding: 10px 5%;
+}
+
+.data-confirmed .value {
+    font-weight: 800;
+    color: blue;
+    font-size: 1.5rem;
+    margin: 0 !important;
+}
+
+.data-confirmed .icon {
+    color: blue;
+    font-size: 3rem;
+    margin-right: 10%;
+}
+
+.data-recovery {
+    border: 1px solid rgb(2, 204, 2);
+    border-radius: 5px;
+    padding: 10px 5%;
+}
+
+.data-recovery .value {
+    font-weight: 800;
+    color: rgb(2, 204, 2);
+    font-size: 1.5rem;
+    margin: 0 !important;
+}
+
+.data-recovery .icon {
+    color: rgb(2, 204, 2);
+    font-size: 3rem;
+    margin-right: 10%;
+}
+
+@media only screen and (max-width: 900px) {
+    .title-container .subtitle {
+        margin-bottom: 10px !important;
+    }
+    .map-container svg {
+        height: 300px !important;
+    }
+}
